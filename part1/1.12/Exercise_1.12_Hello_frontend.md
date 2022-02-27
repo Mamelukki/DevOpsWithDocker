@@ -7,5 +7,5 @@
 ### Commands:
 
 ```console
-~$ docker build . -t frontend-example && docker run -p 5000:5000 frontend-example
+~$ docker build . -t frontend-example && docker run -p 127.0.0.1:5000:5000 frontend-example
 ```
