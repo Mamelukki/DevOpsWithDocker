@@ -9,7 +9,7 @@
 ### Command to start the backend
 
 ```console
-~$ dockebuild . -t backend-example && docker run -p 8080:8080 backend-example
+~$ docker build . -t backend-example && docker run -p 8080:8080 backend-example
 
 ```
 
