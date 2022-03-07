@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+
+  backend:
+      image: backend-example
+      build: ./example-backend
+      ports:
+        - 8080:8080
+      environment:
+        - REDIS_HOST=redis
+        - POSTGRES_HOST=postgres
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DATABASE=postgres
+      depends_on:
+        - redis
+        - postgres
+
+  frontend:
+      image: frontend-example
+      build: ./example-frontend
+      ports: 
+        - 5000:5000
+
+  redis:
+      image: redis
+
+  postgres:
+      image: postgres:13.2-alpine
+      restart: unless-stopped
+      environment:
+        - POSTGRES_PASSWORD=postgres
+
+  reverse-proxy:
+      image: nginx
+      volumes: 
+         - ./nginx.conf:/etc/nginx/nginx.conf
+      ports: 
+         - 80:80
+      environment:
+         - NGINX_HOST=http://localhost/
+         - NGINX_PORT=80
+      depends_on:
+         - backend
+         - frontend
