@@ -10,6 +10,6 @@
 ### Commands:
 
 ```console
-sudo docker build . -t mamelukki/devops-with-docker-course-material
-sudo docker run -it -v /var/run/docker.sock:/var/run/docker.sock course-material-example
+~$ docker build . -t mamelukki/devops-with-docker-course-material
+~$ docker run -it -v /var/run/docker.sock:/var/run/docker.sock course-material-example
 ```

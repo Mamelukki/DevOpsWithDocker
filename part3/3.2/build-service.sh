@@ -8,7 +8,3 @@ docker build -t mamelukki/devops-with-docker-course-material:latest
 docker login
 
 docker push mamelukki/devops-with-docker-course-material:latest
-
-
-
-
