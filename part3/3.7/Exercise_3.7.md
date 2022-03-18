@@ -1,18 +1,18 @@
-## Exercise 3.6 part 2: Multi-stage backend
+## Exercise 3.7
 
-- Lets do a multi-stage build for the backend project since we've come so far with the application
-- The project is in golang and building a binary that runs in a container, while straightforward, isn't exactly trivial
-- Use resources that you have available (Google, example projects) to build the binary and run it inside a container that uses FROM scratch
-- To pass the exercise the image must be smaller than 25MB
+- Do all or most of the optimizations from security to size for any other Dockerfile you have access to, in your own project or for example the ones used in previous "standalone" exercises
+- Please document Dockerfiles both before and after
 
-### Image size before optimizing:
+### Image sizes before optimization:
 
 ```console
-backend-example                                   latest        6079b42fbc44   24 hours ago        447MB
+spring-example                                    latest        bf89380bd6eb   2 weeks ago          611MB
+
 ```
 
-### Image size after optimizing:
+### Image sizes after optimization:
 
 ```console
-backend-example                                   latest        c73761dce0fe   25 seconds ago      23.7MB
+spring-example                                    latest        28690f28fbcc   53 seconds ago       121MB
+
 ```
