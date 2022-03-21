@@ -6,14 +6,14 @@
 - Build it with the instructions in README and the built assets should be in build folder
 - You can still use the serve to serve the static files or try out something else
 
-### Image size before optimizing:
+### Image sizes before optimizing:
 
 ```console
 backend-example                                   latest        6079b42fbc44   24 hours ago         447MB
 frontend-example                                  latest        afda5b7994db   17 hours ago         417MB
 ```
 
-### Image size after optimizing:
+### Image sizes after optimizing:
 
 ```console
 backend-example                                   latest        c73761dce0fe   About an hour ago    23.7MB
